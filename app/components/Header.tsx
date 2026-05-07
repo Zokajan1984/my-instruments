@@ -13,14 +13,12 @@ export default function Header({ addAction }: Props) {
     <>
       <header className="w-full border-b-2 border-black bg-white p-4 flex justify-between items-center">
         <div className="font-bold text-xl">
-          <img
-            src="/logoipsum-366.png"
-            alt="Logotip"
-            className="w-20 h-20"
-          />
+          <img src="/logoipsum-366.png" alt="Logotip" className="w-20 h-20" />
         </div>
 
-        <h1 className="text-4xl font-bold">Электроинструменты для строительства</h1>
+        <h1 className="text-4xl font-bold">
+          Электроинструменты для строительства
+        </h1>
         <button
           onClick={() => setOpen(true)}
           className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800"
@@ -40,7 +38,7 @@ export default function Header({ addAction }: Props) {
             </button>
 
             <h2 className="font-semibold mb-4 text-center">
-            Добавление новых инструментов
+              Добавление новых инструментов
             </h2>
 
             <form
@@ -53,20 +51,29 @@ export default function Header({ addAction }: Props) {
                 name="name"
                 required
                 placeholder="Название"
-                className="border p-2 rounded w-full mb-2"
+                className="border p-2 rounded w-full"
               />
 
               <input
                 type="text"
                 name="image_url"
-                placeholder="https://..."
+                placeholder="Ссылка на фото https://..."
                 required
-                className="border p-2 rounded w-full mb-2"
+                className="border p-2 rounded w-full"
+              />
+
+              {/* НОВОЕ ПОЛЕ - ЦЕНА */}
+              <input
+                type="text"
+                name="price"
+                placeholder="Цена, напр. 1 800 000 сум"
+                required
+                className="border p-2 rounded w-full"
               />
 
               <button
                 type="submit"
-                className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 w-full"
+                className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 w-full mt-2"
               >
                 Сохранить
               </button>

@@ -48,12 +48,10 @@ export default async function Home() {
     <>
       <Header addAction={addInstrument} />
       <main className="p-6 container mx-auto">
-        <h1 className="text-3xl font-bold mb-6 text-center">
-          Мои инструменты...
-        </h1>
+        <h1 className="text-3xl font-bold mb-6 text-center">Мои инструменты</h1>
 
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 place-items-center">
             {instruments?.map((item) => (
               <InstrumentCard
                 key={item.id}
