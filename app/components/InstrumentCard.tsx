@@ -47,7 +47,7 @@ export default function InstrumentCard({
         />
       ) : (
         <div className="w-full h-48 bg-gray-100 flex items-center justify-center text-gray-400">
-          Нет фото
+          Нет фото Test
         </div>
       )}
 
