@@ -14,10 +14,11 @@ export default async function Home() {
     "use server";
     const name = formData.get("name") as string;
     const image_url = formData.get("image_url") as string;
+    const price = formData.get("price") as string;
     if (!name) return;
     await supabase
       .from("instruments")
-      .insert({ name, image_url: image_url || null });
+      .insert({ name, image_url: image_url || null, price: price || "0 сум" });
     revalidatePath("/");
   }
 
@@ -26,10 +27,11 @@ export default async function Home() {
     const id = formData.get("id") as string;
     const name = formData.get("name") as string;
     const image_url = formData.get("image_url") as string;
+    const price = formData.get("price") as string;
     if (!id || !name) return;
     await supabase
       .from("instruments")
-      .update({ name, image_url: image_url || null })
+      .update({ name, image_url: image_url || null, price })
       .eq("id", id);
     revalidatePath("/");
   }
@@ -47,7 +49,7 @@ export default async function Home() {
       <Header addAction={addInstrument} />
       <main className="p-6 container mx-auto">
         <h1 className="text-3xl font-bold mb-6 text-center">
-          Мои инструменты
+          Мои инструменты...
         </h1>
 
         <div className="flex justify-center">
