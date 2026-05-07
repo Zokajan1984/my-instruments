@@ -47,7 +47,7 @@ export default async function Home() {
       <Header addAction={addInstrument} />
       <main className="p-6 container mx-auto">
         <h1 className="text-3xl font-bold mb-6 text-center">
-          Мои инструменты Test-GitDoc...
+          Мои инструменты
         </h1>
 
         <div className="flex justify-center">
